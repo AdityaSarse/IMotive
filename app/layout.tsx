@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -15,10 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lumina — Premium Learning Analytics Dashboard",
-  description: "Optimize your study streaks, course metrics, XP completions, and focus schedules inside Lumina's next-generation analytical platform.",
-  keywords: ["analytics", "learning", "dashboard", "study tracker", "SaaS", "nextjs", "lumina"],
-  authors: [{ name: "Aditya" }],
+  title: "Dashboard",
+  description: "Learning Dashboard",
+};
+
+export const viewport: Viewport = {
   themeColor: "#05070D",
 };
 
