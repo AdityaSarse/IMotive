@@ -50,6 +50,11 @@ Designed as a **high-fidelity educational SaaS dashboard** featuring responsive 
 
 ---
 
+📸 Preview
+Dashboard UI
+
+![Dashboard Preview](./public/design-reference.png)
+
 ## 📁 Project Structure
 
 ```txt
