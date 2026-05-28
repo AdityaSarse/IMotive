@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020409;
+  --foreground: #F8FAFC;
+  
+  --bg-deep: #020409;
+  --bg-base: #020409;
+  --bg-card: #0A0D13;
+  
+  --surface-1: #0A0C16;
+  --surface-2: #0A0D13;
+  --surface-3: #111428;
+  
+  --border-primary: #121626;
+  --border-hover: #1E233D;
+  
+  --brand-primary: #6366F1; /* Slate Indigo/Blue */
+  --brand-hover: #4F46E5;
+  --brand-glow: #8B5CF6;    /* Vibrant Purple */
+  
+  --accent-blue: #3B82F6;
+  --accent-cyan: #22D3EE;
+  --accent-pink: #EC4899;
+  --accent-green: #10B981;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), "Inter", "Inter Tight", sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  
+  --color-bg-deep: var(--bg-deep);
+  --color-bg-base: var(--bg-base);
+  --color-bg-card: var(--bg-card);
+  
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  
+  --color-border-primary: var(--border-primary);
+  --color-border-hover: var(--border-hover);
+  
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-glow: var(--brand-glow);
+  
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-green: var(--accent-green);
+  
+  --radius-2xl: 12px;
+  --radius-3xl: 16px;
+}
+
+/* Base resets & typography */
+body {
+  background-color: var(--bg-deep);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom premium card design */
+.premium-card {
+  background: #0A0D13;
+  border: 1px solid #13172A;
+  border-radius: 12px;
+}
+
+.premium-card:hover {
+  border-color: #1B213E;
+  background: #111520;
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020409;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #121626;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366F1;
+}
+
+/* Orbit line keyframes */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Recharts overrides for design styling */
+.recharts-default-tooltip {
+  background-color: #0A0D13 !important;
+  border: 1px solid #1C223E !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7) !important;
+}
+
+.recharts-tooltip-label {
+  color: #94A3B8 !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+}
